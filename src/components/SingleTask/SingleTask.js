@@ -20,8 +20,10 @@ const SingleTask = ({ singleTask, toggleCompleteTask, deleteTask }) => {
                         <div ></div>
                 }
             </button>
+
             {/* task detail  */}
-            <p className="">{task}</p>
+            <p className={isCompleted ? "textCompleted" : ""}>{task}</p>
+
             {/* task delete button  */}
             <button type="button"
                 className="deleteButton"

@@ -4,7 +4,6 @@ import TaskList from "./components/TaskList/TaskList";
 
 function App() {
   const [taskList, setTaskList] = useState([]);
-  console.log(taskList);
 
   const HandleAddToTask = (task) => {
     const singleTask = {
