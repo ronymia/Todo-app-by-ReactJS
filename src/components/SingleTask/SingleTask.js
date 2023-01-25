@@ -1,17 +1,24 @@
 import React from 'react';
+import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { TbTrash } from 'react-icons/tb';
 import './SingleTask.css';
 
-const SingleTask = ({ singleTask }) => {
-    const { task, isCompleted } = singleTask;
+const SingleTask = ({ singleTask, toggleCompleteTask }) => {
+    const { id, task, isCompleted } = singleTask;
 
     return (
         <div className="single-task">
             {/* complete check button */}
             <button type="button"
                 className="checkContainer"
+                onClick={() => toggleCompleteTask(id)}
             >
-                <div ></div>
+                {
+                    isCompleted ?
+                        <BsFillCheckCircleFill />
+                        :
+                        <div ></div>
+                }
             </button>
             {/* task detail  */}
             <p className="">{task}</p>
