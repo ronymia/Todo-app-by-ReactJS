@@ -2,7 +2,7 @@ import React from 'react';
 import SingleTask from '../SingleTask/SingleTask';
 import './TaskList.css';
 
-const TaskList = ({ taskList, toggleCompleteTask }) => {
+const TaskList = ({ taskList, toggleCompleteTask, deleteTask }) => {
 
     return (
         <section className="tasks">
@@ -23,6 +23,7 @@ const TaskList = ({ taskList, toggleCompleteTask }) => {
                         key={singleTask.id}
                         singleTask={singleTask}
                         toggleCompleteTask={toggleCompleteTask}
+                        deleteTask={deleteTask}
                     />)
                 }
             </div>

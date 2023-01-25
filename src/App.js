@@ -29,10 +29,19 @@ function App() {
     setTaskList(newTaskList);
   }
 
+  const deleteTask = (taskId) => {
+    const restTask = taskList.filter(task => task.id !== taskId);
+    setTaskList(restTask);
+  }
+
   return (
     <>
       <Header HandleAddToTask={HandleAddToTask} />
-      <TaskList taskList={taskList} toggleCompleteTask={toggleCompleteTask} />
+      <TaskList
+        taskList={taskList}
+        toggleCompleteTask={toggleCompleteTask}
+        deleteTask={deleteTask}
+      />
     </>
   );
 }

@@ -3,7 +3,7 @@ import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { TbTrash } from 'react-icons/tb';
 import './SingleTask.css';
 
-const SingleTask = ({ singleTask, toggleCompleteTask }) => {
+const SingleTask = ({ singleTask, toggleCompleteTask, deleteTask }) => {
     const { id, task, isCompleted } = singleTask;
 
     return (
@@ -25,6 +25,7 @@ const SingleTask = ({ singleTask, toggleCompleteTask }) => {
             {/* task delete button  */}
             <button type="button"
                 className="deleteButton"
+                onClick={() => deleteTask(id)}
             >
                 <TbTrash size={20} />
             </button>
