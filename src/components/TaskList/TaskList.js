@@ -2,8 +2,7 @@ import React from 'react';
 import SingleTask from '../SingleTask/SingleTask';
 import './TaskList.css';
 
-const TaskList = () => {
-    const taskList = [1, 2, 3];
+const TaskList = ({ taskList }) => {
 
     return (
         <section className="tasks">
@@ -20,7 +19,10 @@ const TaskList = () => {
 
             <div className="list">
                 {
-                    taskList.map(singleTask => <SingleTask />)
+                    taskList.map(singleTask => <SingleTask
+                        key={singleTask.id}
+                        singleTask={singleTask}
+                    />)
                 }
             </div>
         </section>

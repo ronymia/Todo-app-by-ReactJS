@@ -2,7 +2,9 @@ import React from 'react';
 import { TbTrash } from 'react-icons/tb';
 import './SingleTask.css';
 
-const SingleTask = () => {
+const SingleTask = ({ singleTask }) => {
+    const { task, isCompleted } = singleTask;
+
     return (
         <div className="single-task">
             {/* complete check button */}
@@ -12,7 +14,7 @@ const SingleTask = () => {
                 <div ></div>
             </button>
             {/* task detail  */}
-            <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p className="">{task}</p>
             {/* task delete button  */}
             <button type="button"
                 className="deleteButton"

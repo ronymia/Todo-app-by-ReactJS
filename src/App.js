@@ -7,7 +7,7 @@ function App() {
 
   const HandleAddToTask = (task) => {
     const singleTask = {
-      id: (new Date()).getTime(),
+      id: new Date().getTime(),
       task: task,
       isCompleted: false
     };
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Header HandleAddToTask={HandleAddToTask} />
-      <TaskList />
+      <TaskList taskList={taskList} />
     </>
   );
 }
